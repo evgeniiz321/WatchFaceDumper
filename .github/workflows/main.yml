@@ -12,9 +12,12 @@ jobs:
     - uses: actions/checkout@v2
     - run: bundle install
     - run: bundle exec pod lib lint
+    - run: ls -la
   build_mac:
     runs-on: macOS-11
     steps:
     - uses: actions/checkout@v2
     - run: gem install fastlane
     - run: fastlane gym --configuration Debug --skip_archive --scheme 'WatchFaceDumper'
+    - run: ls -la
+    - run: ls -la WatchFaceDumper
