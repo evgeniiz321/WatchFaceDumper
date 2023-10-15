@@ -20,3 +20,8 @@ jobs:
     - run: gem install fastlane
     - run: fastlane gym --configuration Debug --skip_archive --scheme 'WatchFaceDumper'
     - run: find /Users/runner/Library/Developer/Xcode/DerivedData -name WatchFaceDumper.app
+    - name: Archive build dir
+      uses: actions/upload-artifact@v3
+      with:
+        name: build_dir
+        path: /Users/runner/Library/Developer/Xcode/DerivedData/
