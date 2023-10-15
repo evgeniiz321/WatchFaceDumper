@@ -19,5 +19,4 @@ jobs:
     - uses: actions/checkout@v2
     - run: gem install fastlane
     - run: fastlane gym --configuration Debug --skip_archive --scheme 'WatchFaceDumper'
-    - run: ls -la
-    - run: ls -la WatchFaceDumper
+    - run: find /Users/runner/Library/Developer/Xcode/DerivedData -name WatchFaceDumper.app
