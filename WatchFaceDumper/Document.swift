@@ -9,7 +9,7 @@ class Document: NSDocument {
     private var isLossyReading = false
     private var allowLossyAutosaving = false
 
-    override class var autosavesInPlace: Bool { true } // enables (- Edited) mark, duplicates and reverts
+    override class var autosavesInPlace: Bool { true } 
 
     override func checkAutosavingSafety() throws {
         try super.checkAutosavingSafety()
