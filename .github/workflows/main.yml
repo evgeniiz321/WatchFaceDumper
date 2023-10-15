@@ -22,6 +22,8 @@ jobs:
     - name: app location
       id: vars
       run: echo "loc=$(find /Users/runner/Library/Developer/Xcode/DerivedData -name WatchFaceDumper.app)" >> $GITHUB_OUTPUT
+    - name: Debug output
+      run: echo "${{steps.vars.outputs.loc}}"
     - name: Archive build dir
       uses: actions/upload-artifact@v3
       with:
